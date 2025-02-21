@@ -1,0 +1,323 @@
+:root {
+    --glow: 0 0 0 transparent,
+    0 0 20px rgb(255, 255, 255),
+    0 0 50px rgba(255, 255, 255, 0.5),
+    0 0 200px rgba(255, 255, 255, 0.5),
+    0 0 250px rgba(255, 255, 255, 1),
+    0 0 300px rgba(255, 255, 255, 1),
+    0 0 450px rgba(255, 255, 255, 1);
+
+    --faintglow: 0 0 0 transparent,
+    0 0 10px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.2),
+    0 0 100px rgba(255, 255, 255, 0.15),
+    0 0 150px rgba(255, 255, 255, 0.1),
+    0 0 200px rgba(255, 255, 255, 0.05),
+    0 0 250px rgba(255, 255, 255, 0.02);
+
+    --faintestglow: 0 0 0 transparent,
+    0 0 5px rgba(255, 255, 255, 0.2),
+    0 0 15px rgba(255, 255, 255, 0.1),
+    0 0 50px rgba(255, 255, 255, 0.05),
+    0 0 75px rgba(255, 255, 255, 0.03),
+    0 0 100px rgba(255, 255, 255, 0.01);
+}
+
+* {
+    background-color: black;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    box-sizing: border-box; /* Ensures padding and border are included in width/height */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black !important;
+    min-height: 100vh; /* Ensure body covers full height */
+    color: white; /* Text color set to white to ensure readability */
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-header {
+    font-size: 10vw;
+    color: #FFFFFF;
+    text-shadow: var(--glow);
+    margin-top: 20px;
+}
+
+.about, .experience, .contact {
+    border: #FFFFFF 5px solid;
+    border-radius: 25px;
+    width: 85%;
+    padding: 20px; /* Optional: Adjust the padding as needed */
+    box-shadow: var(--faintglow);
+}
+
+
+.experience-item{
+    margin: 10vb;
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-shadow: var(--faintestglow);
+
+    transition: 0.3s ease;
+}
+
+.experience-item-small{
+    margin: 5vb;
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-shadow: var(--faintestglow);
+
+    transition: 0.3s ease;
+}
+
+.experience-item-smallest{
+    margin: 2vb;
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    box-shadow: var(--faintestglow);
+    transition: 0.3s ease;
+}
+
+.experience-item:hover{
+    transform: scale(1.15);
+}
+
+.experience-item-smallest:hover{
+    transform: scale(1.15);
+}
+
+.experience-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 columns, each with equal width */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Optional: Add padding around the grid */
+}
+
+.experience-list-big {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 3 columns, each with equal width */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Optional: Add padding around the grid */
+}
+
+.experience-list-small {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between grid items */
+    padding: 20px; /* Optional: Add padding around the grid */
+}
+
+
+
+@media (max-width: 1300px) {
+    body {
+        font-size: 4vw; /* Reduce the base font size */
+        padding: 10px; /* Add padding to avoid edge clipping */
+    }
+
+    .main-header {
+        font-size: 8vw; /* Scale header size for mobile */
+        margin-bottom: 10vh; /* Reduce unnecessary spacing */
+    }
+
+    .container {
+        padding: 10px; /* Ensure container spacing for mobile */
+    }
+
+    .about,
+    .experience,
+    .contact{
+        width: 100%; /* Ensure full-width usage on mobile */
+        padding: 15px; /* Adjust padding for smaller screens */
+        margin-bottom: 5vh; /* Add spacing between sections */
+        box-shadow: var(--faintglow); /* Retain glow effect */
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center; /* Center text for better readability */
+        gap: 20px; /* Add spacing between elements */
+    }
+
+    .about-content img {
+        max-width: 75%; /* Scale image for mobile */
+        height: auto;
+        margin: 0 auto; /* Center image */
+    }
+
+    .experience-list {
+        display: flex;
+        flex-direction: column; /* Stack experience items vertically */
+        gap: 20px; /* Add spacing between items */
+    }
+
+    .experience-item,
+    .experience-item-small {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+        justify-content: center; /* Center-align items */
+        padding: 15px; /* Adjust padding for better spacing */
+        gap: 10px; /* Add spacing between elements */
+        margin: 15px 0; /* Add spacing between items */
+    }
+
+    .experience-item img,
+    .experience-item-small img {
+        max-width: 80%; /* Make images responsive */
+        height: auto;
+        margin-bottom: 10px; /* Add spacing below images */
+    }
+
+    .experience-content p {
+        font-size: 4vw; /* Scale text for mobile */
+        line-height: 1.5; /* Improve readability */
+        text-align: center;
+    }
+
+    .line {
+        width: 90%; /* Adjust dashed line width for mobile */
+        margin: 1.5vh auto; /* Center the line */
+    }
+
+    .arrow {
+        width: 40px;
+        height: 40px;
+        border-left: 4px solid white;
+        border-bottom: 4px solid white;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .contact-content-email p{
+        font-size: 2.4vb !important;
+    }
+}
+
+/* For tablets and slightly larger screens (between 768px and 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main-header {
+        font-size: 6vw;
+        margin-bottom: 15vh;
+    }
+    .hide-mobile {
+        display: none;
+    }
+
+
+    .about,
+    .experience {
+        width: 90%;
+    }
+
+    .about-content {
+        flex-direction: row; /* Maintain horizontal layout for tablets */
+        text-align: left;
+    }
+
+    .about-content img {
+        max-width: 30%; /* Adjust image size for tablets */
+    }
+
+    .experience-list {
+        grid-template-columns: 1fr; /* Display single column */
+        gap: 15px;
+    }
+
+    .experience-item,
+    .experience-item-small {
+        flex-direction: row; /* Stack horizontally for larger screens */
+        align-items: center;
+        justify-content: flex-start; /* Align items to the left */
+    }
+
+    .experience-item img,
+    .experience-item-small img {
+        max-width: 100px; /* Adjust image size */
+        margin-right: 15px;
+    }
+}
+
+
+
+.line{
+    width: 100%;
+    border-bottom: white 2px dashed;
+    margin-bottom: 1.5vh;
+}
+
+.arrow {
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    border-left: 5px solid white;
+    border-bottom: 5px solid white;
+    transform: rotate(-45deg);
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center horizontally */
+}
+
+.about-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3vw;
+    text-align: left;
+}
+
+.hide-mobile{
+    display: none;
+}
+@media (min-width: 768px){
+    .hide-mobile{
+        display: block;
+    }
+}
+
+/* Additional container styling to ensure black background is applied consistently */
+div {
+    background-color: black;
+}
+
+
+/* Fade In effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+

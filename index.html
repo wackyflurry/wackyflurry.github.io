@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Imports -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    
+    <title>wackyflurry site yeah</title>
+
+    <style>
+        /* Header Styling */
+        .header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+            border-bottom: 2px solid white;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .header a:hover {
+            color: cyan;
+        }
+
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Responsive Header */
+        @media (max-width: 768px) {
+            .header{
+                display: none;
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Top section -->
+<header class="header">
+    <div class="logo" style="color: white">wackyflurry</div>
+    <nav>
+        <div class="nav-links">
+            <a href="#welcome">Sup</a>
+            <a href="#about">About</a>
+            <a href="#experience">Interests</a>
+            <a href="#contact">DNI List</a>
+            <a href="#socials">Socials</a>
+        </div>
+    </nav>
+</header>
+
+    <div class="welcome fade-in" id="welcome"> <!-- Welcome Screen -->
+        <div class="container" style="width: 100%;">
+            <h1 class="main-header" style="text-align: center; margin-bottom: 25vh; margin-top: 200px">sup</h1>
+            <div class="arrow"></div>
+        </div>
+    </div>
+
+    <div style="margin-top: 25vh; color: white" class="about fade-in" id="about"> <!-- About Me -->
+        <div class="container" style="width: 100%">
+            <h1 class="about-header" style="font-size: 5vb;">About</h1>
+            <span class="line"></span>
+            <div class="about-content">
+                <p style="font-size: 3vb">
+                    Hello! I'm a random internet person that nowadays goes by Wacky/Wacker. I used to go by Project Tea, so high chance you know me from there.<br>
+                    Thanks for checking out my site!<br><br>
+                    I'm currently learning coding, primarily in C#, Lua, Html, Css.. you get the point. If you want to ask me for any form of work, feel free to message me on any platform I'm active on! (Preferably Discord (@wackyflurry)).
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 5vh; color: white" class="experience fade-in" id="experience"> <!-- My Experience -->
+        <div class="container" style="width: 100%">
+            <h1 style="font-size: 5vb;">Interests</h1>
+            <div class="experience-content">
+                <p style="font-size: 3vb; border-top: white 2px dashed; padding-top: 5vh">
+                    Here's a list of all the things I've been consistently interested in, my interests change a lot tho!<br><br>
+                </p>
+
+                <div class="experience-list">
+                    <div class="experience-item">
+                        <div>
+                            <img src="img/logos/rhythm.png" alt="Music Note" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2>Rhythm Games</h2>
+                            <h3>Been a fan basically since FNF became a thing. Now one of my favorite hobbies is to make charts/code in FNF!</h3>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div>
+                            <img src="img/logos/controller.png" alt="Controller" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2>Game Dev</h2>
+                            <h3>Haven't really done much aside from the occasional school project, but becoming a game dev is a big goal of mine.</h3>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div>
+                            <img src="img/logos/drums.png" alt="Drums" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2>Breakcore</h2>
+                            <h3>blame <span><a href="https://store.steampowered.com/app/1229490/ULTRAKILL/">ultrakill</a></span> for this one</h3>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div>
+                            <img src="img/logos/gmod.png" alt="Gmod Logo" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2>Gmod, Source, everything in between</h2>
+                            <h3>Been playing/consuming source content for longer than I should have.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 25vh; margin-bottom: 10vh; color: white" class="contact fade-in" id="contact"> <!-- Contact -->
+        <div class="container" style="width: 100%">
+            <h1 class="about-header" style="font-size: 5vb;">DNI</h1>
+            <span class="line"></span>
+            <div class="about-content">
+                <p style="font-size: 3vb">
+                    Unfortunately, this list is needed. <br><br>
+                    DNI IF:<br>
+                    Pedophile/MAP/Age Regressor<br>
+                    Zoophile<br>
+                    Homophobic, Transphobic, etc.<br>
+                    Pro Israel<br>
+                    <br>
+                    Additionally, Do not bring up the following things to me:<br>
+                    Dave and Bambi<br>
+                    My Past<br>
+                    People I have a history of trouble with and still do.<br><br>
+                    If you have any questions, or if I forgot to add something, let me know!
+                </p>
+            </div>
+        </div>
+    </div>
+<div style="margin-top: 5vh; color: white" class="experience fade-in" id="socials"> <!-- My Experience -->
+    <div class="container" style="width: 100%">
+        <h1 style="font-size: 5vb;">My Socials</h1>
+        <div class="experience-content">
+            <p style="font-size: 3vb; border-top: white 2px dashed">
+                <br>Reach out to me here:<br>
+            </p>
+
+            <div class="experience-list-big">
+                <div class="experience-item-smallest">
+                    <div>
+                        <a href="https://bsky.app/profile/wackyflurry.bsky.social"><img src="img/logos/bsky.png" alt="Bluesky" style="height: auto; max-width: 200px"></a>
+                    </div>
+                </div>
+                <div class="experience-item-smallest">
+                    <div>
+                        <a href="https://x.com/wackyflurry"><img src="img/logos/twitter.png" alt="Twitter" style="height: auto; max-width: 200px"></a>
+                    </div>
+                </div>
+                <div class="experience-item-smallest">
+                    <div>
+                        <a href="https://www.youtube.com/@wackynix171"><img src="img/logos/yt.png" alt="Youtube" style="height: auto; max-width: 200px"></a>
+                    </div>
+                </div>
+                <div class="experience-item-smallest">
+                    <div>
+                        <a href="https://steamcommunity.com/profiles/76561198997908446/"><img src="img/logos/steam.png" alt="Steam" style="height: auto; max-width: 200px"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer style="background-color: transparent">
+    <p style="font-size: 3vb; text-align: center; background-color: transparent">I usually don't do much web dev so this website might look a bit scuffed, bare with me here!</p>
+</footer>
+
+
+
+<script>
+    // Function to handle the fade-in effect on scroll
+    function handleScrollAnimations() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        fadeElements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // Check if the element is visible in the viewport
+            if (rect.top <= windowHeight - 100) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', handleScrollAnimations);
+
+    // Trigger animations on page load
+    document.addEventListener('DOMContentLoaded', handleScrollAnimations);
+</script>
+
+</body>
+</html>
